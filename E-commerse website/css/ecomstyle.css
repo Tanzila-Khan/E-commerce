@@ -1,0 +1,671 @@
+*,*::before,*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  /*overflow-x: hidden;*/
+}
+html{
+  scroll-behavior: smooth;
+}
+body,html{
+	overflow-x: hidden;
+}
+
+.nav_{
+position: absolute;
+top: 0;
+width: 100%;
+height: 50px;
+z-index: 1;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.logo{
+  margin:30px 100px;
+  color: #64243c;
+    font-size: 25px;
+}
+.logo a{
+    color: #64243c;
+    text-decoration: none;
+   
+}
+ .logo img{
+    margin-top: -25px;
+    width: 80px;
+    height: 50px;
+}
+.nav_  .nav_list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin:30px 100px;
+ 
+}
+.nav_  .nav_list .nav_item{
+    margin-left: 50px;
+}
+.nav_  .nav_list .nav_link{
+    color: #64243c;
+   font-size: 25px;
+   text-decoration: none;
+}
+.nav_  .nav_list .nav_link:hover{
+    color: #c87505;
+}
+
+.nav_ .menu-toggle{
+    display: none;
+}
+
+
+.hero{
+    background:url(../img/banner1.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position:relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+.hero-text{
+     height:10vh;
+    width:40vw;
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-100%);
+    
+    animation: hero-text 1s 1 backwards ;
+}
+.hero-text h5,h1{
+    line-height:150%;
+    color: #64243c;
+}
+
+
+
+
+.btn-main{
+    background: #ffcd87;
+    color: #c04138;
+    border: 2px solid #c04138 ;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 5px;
+    padding: 10px 40px;
+    position:absolute;
+    top:60%;
+    left:30%; 
+    animation: hero-btn 1s 1 backwards ;
+}
+.btn-main:hover{
+    background: #ffcd87;
+    color: #c04138;
+    border: 2px solid #c04138 ;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5),-10px -10px 15px rgba(238, 178, 178, 0.5);
+}
+
+
+
+
+.service{
+   background: #fcf6f1;
+   padding: 50px 40px;
+   color: #01395e;
+   box-shadow: 10px 10px 15px rgba(199, 185, 185, 0.5),-10px -10px 15px rgba(253, 230, 230, 0.5);
+}
+.service .fas{
+    margin: 10px 0;
+    color: #c04138;
+    font-size: 30px;
+}
+.service .service-card{
+    color: #000;
+}
+.service .service-card:hover .fas{
+    color: #64243c;
+}
+
+
+
+
+.image-grid{
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 30% 30% 37%;
+    grid-template-rows: 300px 300px;
+    justify-content: space-around;
+    row-gap: 10px;
+}
+
+.image-grid .perfume-banner{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/perfume-banner.png ) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+  height:100%;
+    position: relative;
+    grid-column: 1 / span 2;
+    transition: .7s all ease;
+    box-shadow:60px 6px 12px rgba(199, 185, 185, 0.5),-3px -3px 6px rgba(253, 230, 230, 0.5);
+}
+
+.image-grid .perfume-banner:hover{
+    background-size: 120% 120%;
+}
+
+
+.image-grid .perfume-banner:hover .btn-grid{
+    animation: hero-btn 1s 1 forwards;
+}
+
+.image-grid .brush{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/brush1.png ) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+  height:100%;
+    position: relative;
+    transition: .7s all ease;
+    box-shadow:6px 6px 8px rgba(199, 185, 185, 0.5),-6px -6px 8px rgba(199, 185, 185, 0.5);
+}
+
+.image-grid .brush:hover{
+    background-size:120% 120%;
+}
+
+.image-grid .brush:hover .btn-grid{
+    animation: hero-btn 1s 1 forwards;
+}
+
+
+.image-grid .eyeshadow{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/eyeshadow5.jpg) no-repeat;
+    background-size:100% 100%;
+    width: 100%;
+  height:100%;
+    position: relative;
+    transition: .7s all ease;
+    box-shadow:6px 6px 8px rgba(199, 185, 185, 0.5),-6px -6px 8px rgba(199, 185, 185, 0.5);
+}
+
+.image-grid .eyeshadow:hover{
+    background-size: 120% 120%;
+}
+
+.image-grid .eyeshadow:hover .btn-grid{
+    animation: hero-btn 1s 1 forwards;
+}
+
+
+.image-grid .banner{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/makeupbanner.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 600px;
+    grid-row: span 2;
+    position: relative;
+    transition: .7s all ease;
+    box-shadow:6px 6px 8px rgba(199, 185, 185, 0.5),-3px -3px 6px rgba(199, 185, 185, 0.5);
+}
+
+.image-grid .banner:hover{
+    background-size:120% 120%;
+}
+
+.image-grid .banner:hover .btn-grid{
+    animation: hero-btn 1s 1 forwards;
+}
+
+
+.image-grid .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #FAE4CE;
+    line-height: 150%;
+}
+
+.btn-grid{
+    background: #feb47b;
+    color: #01395e;
+    font-weight: 100;
+    font-size: 22px;
+    border-radius: 5px;
+    padding: 2px ;
+    position:absolute;
+    top:85%;
+    left:35%; 
+  opacity: 0;
+}
+
+.btn-grid:hover{
+    background: #ffcd87;
+    color: #c04138;
+    border: 2px solid #c04138 ;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5),-10px -10px 15px rgba(238, 178, 178, 0.5);
+    opacity: 1;
+   
+}
+
+.card-deck{
+    margin-bottom: 50px ;
+}
+.card{
+ 
+    position: relative;
+    height: 400px;
+    background: radial-gradient(circle , #fcfcfc,#FAE4CE);
+ 
+}
+.card-circle{
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 50%;
+    background: #ffcd87;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.card-img{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+   width: 70%;
+    height: 50%;
+    transition: .7s all ease-in-out;
+}
+.card-row{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+   padding: 10px;
+    width: 100%;
+    opacity: 0;
+}
+.cart{
+   
+    padding: 2%;
+    background: black;
+    color: white;
+    margin-right: 5px;
+   
+}
+.buy{
+ background: white;
+    padding: 2%;
+
+}
+.card-footer{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    background: white;
+}
+.cart:hover,
+.buy:hover{
+    background: #ffcd87;
+    color: #01395e;
+    }
+    .card:hover .card-row{
+        opacity: 1;
+        }
+
+.card:hover .card-img{
+    transform:scale(1.1)
+    }
+.card:hover .card-circle{
+       opacity: 1;
+ }
+
+ .deal{
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../img/perfumebanner3.png) no-repeat;
+	background-position: top to right;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+    height: 500px;
+ }
+ .deal-inner{
+     padding: 5%;
+     text-align: center;
+ }
+ .deal-inner h1,h5{
+     color: white;
+
+ }
+
+ .btn-deal{
+    background: #feb47b;
+    color: #c04138;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 5px;
+    padding: 10px 40px;
+   margin-top: 15%;
+}
+.btn-deal:hover{
+    background: #ffcd87;
+    color: #c04138;
+    border: 2px solid #c04138 ;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5),-10px -10px 15px rgba(238, 178, 178, 0.5);
+}
+.footer{
+    background: linear-gradient(to right,#d68d73,#ac6752);
+    padding: 5% 0%;
+    color: black;
+}
+.footer ul{
+list-style: none;
+font-size: 18px;
+line-height: 150%;
+
+}
+.footer li{
+    margin-top: 10px;
+}
+.fas{
+    margin-right: 10px;
+}
+.footer a{
+    font-size: 30px;
+    color: black;
+    margin-right: 15px;
+}
+.footer a:hover{
+    color: #64243c;
+}
+hr{
+        border-top: 5px dotted ;
+      width: 70%;
+      margin: 0% 13%;
+ }
+
+
+
+@media  screen and (max-width: 750px){
+    .nav_{
+      
+        flex-direction: column;
+        }
+         .logo{
+          margin:30px 30px;
+       
+        }
+       .logo a{
+         
+            font-size: 15px;
+           
+        }
+        .logo img{
+            margin-top: -25px;
+            width: 40px;
+            height: 30px;
+        }
+          .nav_  .nav_list{
+            width: 75%;
+            height: 100vh;
+            background: #b86468;
+            flex-direction: column;
+            margin: 0px;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            transform: translateX(-100%);
+            transition:transform .5s;
+           
+        }
+        .nav_  .nav_list .nav_item{
+            margin-top: 50px;
+            border-bottom: 2px solid #64243c;
+            margin-right: 30px;
+            padding-bottom: 30px;
+
+        }
+        .nav_  .nav_list .nav_link{
+            color: #64243c;
+           font-size: 25px;
+           text-decoration: none;
+          
+        }
+        .nav_ .menu-toggle{
+          display: block;
+            color: #fff;
+              font-size: 1.8rem;
+              cursor: pointer;
+              z-index: 1500;
+        }
+          .menu-toggle .fa-times{
+           display: none;
+        }
+        .menu-toggle .fa-bars{
+            display: block;
+              position: absolute;
+              top: 70%;
+              right: 5%;
+              transform: translateY(-50%);
+         } 
+        .open .nav_{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+        }
+        .open .nav_  .nav_list{
+            
+            transform: translateX(0);
+            }
+        .open   .menu-toggle .fa-times{
+            display: block;
+            position: absolute;
+              top: 5%;
+             right: 5%;
+             transform: translateY(-50%);
+         }
+         .open   .menu-toggle .fa-bars{
+            display: none;
+
+         }
+     
+        .hero-text{
+             height:40vh;
+            width:100vw;
+            position:absolute;
+            top:50%;
+            left:60%;
+            transform:translate(-50%,-50%);
+            
+            animation: hero-text-small 3s 1 backwards ;
+        }
+        .hero-text h1{
+            font-size: 30px;
+            line-height:150%;
+            color: #64243c;
+        }
+        .hero-text h5{
+            font-size: 20px;
+          margin-top: 20px;
+        }
+        
+        
+        
+        .btn-main{
+            font-size: 22px;
+            border-radius: 5px;
+            padding: 7px 20px;
+            top:75%;
+            left:25%; 
+            animation:  hero-btn-small 3.5s 1 backwards ;
+        }
+        
+.service{
+    padding: 50px 40px;
+   width: 80%;
+}
+ 
+ .service .service-card{
+     color: #000;
+     border-bottom: 2px solid #c04138;
+     margin-bottom: 20px; 
+     padding-bottom: 20px;
+ }
+ .service .service-card-1{
+    color: #000;
+    border-bottom: none;
+    margin-bottom: none; 
+    padding-bottom: none;
+}
+
+ 
+ 
+ 
+ .image-grid{
+     
+     display: grid;
+     grid-template-columns: 47% 47% ;
+     grid-template-rows: 300px 300px 300px;
+  
+ }
+ .image-grid  h3{
+    font-size: 22px;
+ }
+ .image-grid  p{
+    font-size: 15px;
+ }
+ 
+ .btn-grid{
+    
+     font-size: 15px;
+     top:88%;
+     left:30%; 
+   opacity: 0;
+ }
+ .image-grid  .brush,.eyeshadow{
+     height: 97%;
+ }
+ 
+ .image-grid .eyeshadow{
+  margin-top: -10px;
+}
+ 
+ .card{
+  
+     position: relative;
+     height: 350px;
+     width: 85%;
+     margin: 30px;
+     background: radial-gradient(circle , #fcfcfc,#FAE4CE);
+  
+ }
+ 
+ 
+  .deal{
+     background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../img/perfumebanner3.png) no-repeat;
+     background-position: top to right;
+     background-attachment: fixed;
+     background-size: cover;
+     width: 100%;
+     height: 500px;
+  }
+  .deal-inner{
+      padding: 5%;
+      text-align: center;
+  }
+  .deal-inner h1,h5{
+      color: white;
+ 
+  }
+ 
+  .btn-deal{
+     background: #feb47b;
+     color: #c04138;
+     font-weight: 500;
+     font-size: 22px;
+     border-radius: 5px;
+     padding: 10px 40px;
+    margin-top: 15%;
+ }
+ .btn-deal:hover{
+     background: #ffcd87;
+     color: #c04138;
+     border: 2px solid #c04138 ;
+     box-shadow: 10px 10px 15px rgba(0,0,0,0.5),-10px -10px 15px rgba(238, 178, 178, 0.5);
+ }
+ .footer .row{
+   text-align: center;
+ }
+.footer .row div{
+    margin-top: 40px;
+}
+ 
+}
+
+
+@keyframes hero-text{
+    0%{
+        transform:translate(-50%,-20%);
+        opacity: 0;
+    }
+    100%{
+        transform:translate(-50%,-100%);
+        opacity: 1;
+    }
+}
+@keyframes hero-text-small{
+    0%{
+        transform:translate(-50%,50%);
+        opacity: 0;
+    }
+    100%{
+        transform:translate(-50%,-50%);
+        opacity: 1;
+    }
+}
+@keyframes hero-img{
+    0%{
+        transform:scaleX(0);
+        opacity: 0; 
+        top:14%;
+        left:5%;
+    }
+    100%{
+        transform:scaleX(1);
+
+        opacity: 1;
+        top:14%;
+        left:5%;
+    }
+}
+@keyframes hero-btn{
+    0%{
+        transform:translateY(50%);
+        opacity: 0; 
+        
+    }
+    100%{
+        transform:translateY(0);
+
+        opacity: 1;
+        
+    }
+}
+@keyframes hero-btn-small{
+    0%{
+        transform:translateY(150%);
+        opacity: 0; 
+        
+    }
+    100%{
+        transform:translateY(2%);
+
+        opacity: 1;
+        
+    }
+}
